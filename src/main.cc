@@ -354,7 +354,7 @@ std::string ProcessHandle::type() const
 
 void ProcessHandle::display_stats() const
 {
-    std::cout << "pkg,core,dram,gpu,user,system,looped,exec,wall,loops,rate" << std::endl;
+    // std::cout << "pkg,core,dram,gpu,user,system,looped,exec,wall,loops,rate" << std::endl;
 
     for (auto &stat : _stats) {
         Energy e = std::get<0>(stat);
