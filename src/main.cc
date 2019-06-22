@@ -361,10 +361,11 @@ void ProcessHandle::display_stats() const
         Time t = std::get<1>(stat);
         double rate = std::get<2>(stat);
 
+        setbuf(stdout, NULL);
         std::cout << e.package << "," << e.core << "," << e.dram << "," << e.gpu << ","
             << t.user << "," << t.system << "," << t.looped << ","
             << t.user + t.system - t.looped << "," << t.wall << ","
-            << e.loops << "," << rate*100 << std::endl;
+            << e.loops << "," << rate*100;
     }
 }
 
